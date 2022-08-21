@@ -14,11 +14,11 @@ let market = document.querySelector(".market");
 // Toggling the tasks
 const accordion = document.getElementsByClassName("task");
 console.log('outside:',accordion.length);
-// for (i = 0; i < accordion.length; i++) {
-//   accordion[i].addEventListener("click", function (e) {
-//     this.classList.toggle("active");
-//   });
-// }
+for (i = 0; i < accordion.length; i++) {
+  accordion[i].addEventListener("click", function (e) {
+    this.classList.toggle("active");
+  });
+}
 
 // Adding tasks
 addTask.addEventListener("click", function (e) {
