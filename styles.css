@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid springgreen; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.market {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 100vh;
+    background: linear-gradient(90deg,
+            darkslategrey 20%,
+            firebrick 50%,
+            firebrick 30%,
+            darkslategrey 70%);
+    position: relative;
+}
+
+#content {
+    background-color: snow;
+    box-shadow: 0 0 10px whitesmoke;
+    margin-bottom: 1em;
+    transition: cubic-bezier(0.23, 1, 0.320, 1);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 50%;
+    position: relative;
+}
+
+#content:hover {
+    padding: 1.3rem;
+    font-size: calc(initial + 30px)
+}
+
+.title {
+    text-align: center;
+    font-size: 1.8em;
+    color: firebrick;
+    margin: 0.4em 0;
+
+}
+
+.text-top {
+    font-size: 1.1em;
+    text-align: justify;
+    color: darkslategrey;
+    line-height: 1.45em;
+    padding: .1em;
+    overflow: hidden;
+    font-weight: 600;
+    border-bottom: 2px solid darkslategrey;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.text-bottom {
+    font-size: 1.1em;
+    text-align: justify;
+    color: darkslategrey;
+    line-height: 1.45em;
+    padding: .1em;
+    height: 0;
+    overflow: hidden;
+    transition: 0.7s;
+}
+
+.text-top::after {
+    position: absolute;
+    content: "+";
+    right: 1.5rem;
+    color: inherit;
+    font-size: 20px;
+    font-weight: 900;
+
+}
+
+/* Javascript Toggling Styling */
+.task.active .text-bottom {
+    height: fit-content;
+}
+
+.task.active .task .text-top {
+    font-size: 1em;
+    color: darkred;
+}
+
+.task.active .task .text-top:after {
+    content: "-"
+}
+
+
+/* Buttons */
+#btn-section {
+    display: flex;
+    padding: 0 2em;
+    flex-basis: 50%;
+    justify-content: center;
+    gap: 1em;
+}
+
+[class^="btn-"] {
+    width: 100%;
+    margin-top: 1em;
+    font-size: inherit;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+[class^="btn-"]:active {
+    outline: none;
+}
+
+.btn-green {
+    border: none;
+    background-color: darkslategrey;
+    transition: inherit;
+}
+
+.btn-green:hover {
+    opacity: 0.8;
+}
+
+.btn-red {
+    border: none;
+    background-color: firebrick;
+    transition: inherit;
+}
+
+.btn-red:hover {
+    opacity: 0.8;
+}
+
+
+.pop-up {
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    padding: 1em;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.query {
+    background-color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 0 10px;
+    width: fit-content;
+    height: 100%;
+    display: none;
+}
+
+.query h3 {
+    margin-bottom: .5em;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.inputs input {
+    padding: .5em;
+    font-size: inherit;
+    color: darkslategrey;
+    border: none;
+    border-radius: 5px;
+}
+
+.inputs textarea {
+    color: darkslategrey;
+    padding: .5em;
+    border-radius: 5px;
+    font-size: 1em;
+    resize: none;
+    border: none
+}

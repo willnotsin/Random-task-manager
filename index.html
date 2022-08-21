@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Random</title>
+</head>
+
+<body>
+    <section class="market">
+        <div id="content">
+            <h1 class="title">Tasks</h1>
+
+            <div class="text-content" id="text-content">
+                <div class="task">
+                    <p class="text-top">
+                        Buying meat
+                    </p>
+                    <p class="text-bottom">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis iure veritatis nobis.
+                        Reiciendis
+                        ratione magni quia, nihil id asperiores mollitia obcaecati consectetur amet eaque labore. Lorem
+                        ipsum
+                        dolor sit amet consectetur adipisicing elit. Rerum illum sint, eos ratione nulla quo asperiores
+                        minus
+                        optio, repudiandae porro enim nostrum error ex labore!
+                    </p>
+                </div>
+
+            </div>
+
+            <div id="btn-section">
+                <button class="btn-green">Add Task</button>
+                <button class="btn-red">Remove Task</button>
+            </div>
+        </div>
+
+        <!-- Delete's Pop-up -->
+        <section class="pop-up delete">
+            <div class="query del">
+                <h3 style="text-align: center; color: firebrick;">ARE YOU SURE?</h3>
+                <div id="btn-section">
+                    <button class="btn-green" id="btn-cancel0">Cancel</button>
+                    <button class="btn-red" id="btn-delete">Yes</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Addition's Pop-up -->
+        <section class="pop-up new">
+            <!--edit later-->
+            <div class="query add">
+                <h3 style="text-align: center; color: firebrick; font-size: 1.4em;">Enter Task</h3>
+                <div class="inputs">
+                    <input type="text" name="new-task-title" id="new-task-title"
+                        placeholder="Enter Title of New Task Here" required>
+                    <textarea name="new-task-details" id="new-task-details" cols="50" rows="5"
+                        placeholder="Enter in your task" required></textarea>
+                </div>
+                <div id="btn-section">
+                    <button class="btn-green" id="btn-add">Add</button>
+                    <button class="btn-red" id="btn-cancel1">Cancel</button>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
